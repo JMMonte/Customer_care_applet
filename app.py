@@ -18,7 +18,7 @@ days = st.sidebar.slider("Days to simulate:", 1, 730, 365, help="Number of days 
 base_tickets = st.sidebar.number_input("Base daily ticket volume:", min_value=0, value=150, help="Average number of tickets received per day.")
 ai_ticket_cost_base = st.sidebar.number_input("Cost per AI-handled (touched) ticket ($):", min_value=0.0, value=0.75, help="Cost for each ticket that AI interacts with but doesn't fully resolve.")
 ai_ticket_cost_success = st.sidebar.number_input("Additional cost for AI-resolved ticket ($):", min_value=0.0, value=1.5, help="Additional cost for tickets that AI successfully resolves on top of the base cost.")
-agent_ticket_cost = st.sidebar.number_input("Cost per agent-handled ticket ($):", min_value=0.0, value=5.0, help="Cost for each ticket handled by a human agent.")
+agent_ticket_cost = st.sidebar.number_input("Cost per agent-handled ticket ($):", min_value=0.00, value=2.52, help="Cost for each ticket handled by a human agent.")
 discount = st.sidebar.number_input("Discount for purchases larger than $36k (%):", min_value=0.0, max_value=1.0, value=0.2, help="Discount applied to the total cost if annual spend exceeds $36,000.")
 deflection_range = st.sidebar.slider("Deflection rate range:", 0.0, 1.0, (0.05, 0.4), help="Range of percentage of tickets that AI can handle.")
 start_deflection, end_deflection = deflection_range
